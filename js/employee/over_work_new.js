@@ -32,14 +32,14 @@ let $th残業理由 = $("table:nth-child(1) > tbody > tr:nth-child(3) > th")
 $th残業理由
     .append(
         $(`<button>`).attr({
-            id: "bim-残業理由テンプレート化",
+            id: "jim-残業理由テンプレート化",
             "class": "btn jbc-btn-secondary",
             "data-toggle": "tooltip",
             title: "現在の値：" + localStorage.jim__template残業理由,
             style: "font-size: 0.8rem; margin: 5px 0",
         }).text("テンプレート化")
     ).promise().done(function () {
-        $("#bim-残業理由テンプレート化").on("click", function () {
+        $("#jim-残業理由テンプレート化").on("click", function () {
             localStorage.jim__template残業理由 = $("[name='description']").val()
             return false;
         })

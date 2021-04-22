@@ -1,1 +1,1 @@
-$("body").append('<script id="bim-init">')
+$("body").append('<script id="jim-init">')

@@ -1,4 +1,4 @@
-  .bim a, a.bim {
+  .jim a, a.jim {
     text-decoration: none !important;
   }
   
@@ -43,25 +43,25 @@
   /*=================================
    * 申請メニュー用
    * ================================*/
-  #menu_order a.bim-submenu-add-button {
+  #menu_order a.jim-submenu-add-button {
     text-decoration: none;
     padding: 0 20px;
   }
-  .bim-dropdown-item-wrapper {
+  .jim-dropdown-item-wrapper {
     display: table;
     width: 100%;
     height: 50px;
   }
-  .bim-dropdown-item-wrapper a {
+  .jim-dropdown-item-wrapper a {
     display: table-cell;
     vertical-align: middle;
   }
-  .bim-submenu-add-button {
+  .jim-submenu-add-button {
     height: 100%;
     background-color: #4d4d4d;
     color: #b4d3ff;
   }
-  .bim-submenu-add-button:hover {
+  .jim-submenu-add-button:hover {
     background-color: #b7d6dc;
     color: #333333;
   }
