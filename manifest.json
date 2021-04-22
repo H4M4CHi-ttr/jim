@@ -2,7 +2,7 @@
     "name": "JIM - Jobcan IMproved",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Sample Chrome Extension",
+    "description": "ジョブカンの痒いところに手を伸ばすための拡張機能です。",
     "content_scripts": [
         {
             "": "外部ライブラリ",
