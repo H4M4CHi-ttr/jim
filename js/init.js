@@ -1,0 +1,1 @@
+$("body").append('<script id="bim-init">')
