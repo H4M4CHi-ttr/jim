@@ -98,7 +98,8 @@
                 "https://ssl.jobcan.jp/employee/over-work/new/",
                 "https://ssl.jobcan.jp/employee/over-work/new/?*"
             ],
-            "js": ["js/employee/over_work_new.js"]
+            "js": ["js/employee/over_work_new.js"],
+            "css": ["css/employee/over_work.css"]
         },
         {
             "": "employee 休日出勤申請一覧",

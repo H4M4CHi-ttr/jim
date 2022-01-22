@@ -23,24 +23,30 @@ $.ajax("https://ssl.jobcan.jp/employee/over-work")
         $table.appendTo("#申請一覧")
     })
 
+// 残業時刻のプリセット調整
 $("select[name='end[h]']").val(18); // 18は20時のこと
 
-// 残業理由のテンプレート化ボタン
+// 分のセレクトボックスを最初から広げておく
+$("select[name='end[m]'").attr("size","2")
+
+// 残業理由のプリセット保存ボタン
 $("table:nth-child(1) > tbody > tr:nth-child(1) > th").css({ width: "100px" })
 
 let $th残業理由 = $("table:nth-child(1) > tbody > tr:nth-child(3) > th")
 $th残業理由
     .append(
         $(`<button>`).attr({
-            id: "jim-残業理由テンプレート化",
-            "class": "btn jbc-btn-secondary",
+            id           : "jim-残業理由プリセット保存",
+            "class"      : "btn jbc-btn-secondary",
             "data-toggle": "tooltip",
-            title: "現在の値：" + localStorage.jim__template残業理由,
-            style: "font-size: 0.8rem; margin: 5px 0",
-        }).text("テンプレート化")
+            title        : "現在の値：" + localStorage.jim__template残業理由,
+            style        : "font-size: 0.8rem; margin: 5px 0",
+        }).text("プリセット保存")
     ).promise().done(function () {
-        $("#jim-残業理由テンプレート化").on("click", function () {
-            localStorage.jim__template残業理由 = $("[name='description']").val()
-            return false;
-        })
+        $("#jim-残業理由プリセット保存")
+            .on("click", function (event) {
+                event.preventDefault();
+                localStorage.jim__template残業理由 = $("[name='description']").val()
+                $(this).attr("data-original-title", "現在の値：" + $("[name='description']").val())
+            })
     })
