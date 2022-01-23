@@ -61,6 +61,8 @@ $("span[id^='cal']").css({
     "z-index": 9999,
 })
 
+// セレクトボックスを小さくさせているclassを取り除く
+$("select").removeClass("custom-select-sm")
 
 run_on_page(function(){
     $('[data-toggle="tooltip"]').tooltip()
