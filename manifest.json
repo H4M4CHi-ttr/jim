@@ -81,6 +81,26 @@
             "js": ["js/employee/holiday_new.js"]
         },
         {
+            "": "employee 新規休暇申請 確認",
+            "matches": [
+                "https://ssl.jobcan.jp/employee/holiday/confirm",
+                "https://ssl.jobcan.jp/employee/holiday/confirm?*",
+                "https://ssl.jobcan.jp/employee/holiday/confirm/",
+                "https://ssl.jobcan.jp/employee/holiday/confirm/?*"
+            ],
+            "js": ["js/employee/holiday_confirm.js"]
+        },
+        {
+            "": "employee 新規休暇申請 終了",
+            "matches": [
+                "https://ssl.jobcan.jp/employee/holiday/finish",
+                "https://ssl.jobcan.jp/employee/holiday/finish?*",
+                "https://ssl.jobcan.jp/employee/holiday/finish/",
+                "https://ssl.jobcan.jp/employee/holiday/finish/?*"
+            ],
+            "js": ["js/employee/holiday_finish.js"]
+        },
+        {
             "": "employee 残業申請一覧",
             "matches": [
                 "https://ssl.jobcan.jp/employee/over-work",
