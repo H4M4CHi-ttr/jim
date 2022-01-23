@@ -1,79 +1,94 @@
-  .jim a, a.jim {
-    text-decoration: none !important;
-  }
-  
-  /* サイドメニューの背景色変更 */
-  
-  /* メニューにマウスホバーしたときの背景色を薄水色に */
-  .jbc-sidemenu .list-group-item:hover
-  , .jbc-sidemenu .dropdown-item:hover {
-    background-color: #b7d6dc;
-  }
-  /* アクティブなメニューの背景色をタイトルと同じ水色に */
-  .jbc-sidemenu .list-group-item.active {
-    background-color: #1eb8d9;
-  }
-  /* アクティブなメニューにマウスホバーしたときの背景色を少し暗めに */
-  .jbc-sidemenu .list-group-item.active:hover {
-    background-color: #369eb4;
-  }
-  
+.jim a, a.jim {
+  text-decoration: none !important;
+}
 
-  /* サブメニューをインデント、高さを少し増やす */
-  #sidemenu .dropdown-item.menu-btn.py-2 {
-    /* line-height: 2.5rem; */
-    padding-left: 50px;
-  }
-  /* サブメニュー末尾に罫線をつける */
-  #sidemenu .dropup {
-    position: relative;
-    border-bottom: solid 1px #bfbfbf;
-  }
+/* サイドメニューの背景色変更 */
 
-  .list-group-item.py-3, .dropdown-item.py-2 {
-    padding-top: 0.8rem !important;
-    padding-bottom: 0.8rem !important;
-  }
-  
-  /*=================================
-   * 出勤簿用
-   * ================================*/
-  tr.holiday .not-show-in-holiday {
-    display: none;
-  }
-  tr:not(.holiday) .show-in-holiday {
-    display: none;
-  }
-  
-  /*=================================
-   * 申請メニュー用
-   * ================================*/
-  #menu_order a.jim-submenu-add-button {
-    text-decoration: none;
-    padding: 0 20px;
-  }
-  .jim-dropdown-item-wrapper {
-    display: table;
-    width: 100%;
-    /* height: 50px; */
-  }
-  .jim-dropdown-item-wrapper a {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  .jim-submenu-add-button {
-    height: 100%;
-    background-color: #4d4d4d;
-    color: #b4d3ff;
-  }
-  .jim-submenu-add-button:hover {
-    background-color: #b7d6dc;
-    color: #333333;
-  }
-  #menu_order .dropdown-item {
-    width: 200px;
-  }
-  #sidemenu .dropdown-item {
-    vertical-align: middle;
-  }
-  
+/* メニューにマウスホバーしたときの背景色を薄水色に */
+.jbc-sidemenu .list-group-item:hover, .jbc-sidemenu .dropdown-item:hover {
+  background-color: #b7d6dc;
+}
+
+/* アクティブなメニューの背景色をタイトルと同じ水色に */
+.jbc-sidemenu .list-group-item.active {
+  background-color: #1eb8d9;
+}
+
+/* アクティブなメニューにマウスホバーしたときの背景色を少し暗めに */
+.jbc-sidemenu .list-group-item.active:hover {
+  background-color: #369eb4;
+}
+
+
+/* サブメニューをインデント、高さを少し増やす */
+#sidemenu .dropdown-item.menu-btn.py-2 {
+  /* line-height: 2.5rem; */
+  padding-left: 50px;
+}
+
+/* サブメニュー末尾に罫線をつける */
+#sidemenu .dropup {
+  position: relative;
+  border-bottom: solid 1px #bfbfbf;
+}
+
+.list-group-item.py-3, .dropdown-item.py-2 {
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+/* 前月・翌月ボタン */
+.calendar-arrow-btn.btn.btn-sm.d-inline-flex.px-1.border-0 {
+  background-color: #dddddd;
+  margin: 0 5px;
+  padding: 5px 5px !important;
+}
+
+/*=================================
+  * 出勤簿用
+  * ================================*/
+tr.holiday .not-show-in-holiday {
+  display: none;
+}
+
+tr:not(.holiday) .show-in-holiday {
+  display: none;
+}
+
+/*=================================
+  * 申請メニュー用
+  * ================================*/
+#menu_order a.jim-submenu-add-button {
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.jim-dropdown-item-wrapper {
+  display: table;
+  width: 100%;
+  /* height: 50px; */
+}
+
+.jim-dropdown-item-wrapper a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.jim-submenu-add-button {
+  height: 100%;
+  background-color: #4d4d4d;
+  color: #b4d3ff;
+}
+
+.jim-submenu-add-button:hover {
+  background-color: #b7d6dc;
+  color: #333333;
+}
+
+#menu_order .dropdown-item {
+  width: 200px;
+}
+
+#sidemenu .dropdown-item {
+  vertical-align: middle;
+}

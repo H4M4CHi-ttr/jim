@@ -37,6 +37,15 @@ $(".jim-submenu-add-button").each(function () {
 })
 
 //----------------------------------------------
+// 指定月で前月・翌月を押したとき自動で画面を切り替える
+//----------------------------------------------
+$("label:contains('指定月')").closest("th").next("td").find(".calendar-arrow-btn").on("click", function(){
+    $("label:contains('指定月')").prev("input#search-type-month").prop("checked",true)
+    $("input[value=表示]").click()
+    $("a.btn").filter((idx,el) => $(el).text() === "表示")[0].click()
+})
+
+//----------------------------------------------
 // その他、見た目のカスタマイズ
 //----------------------------------------------
 
@@ -52,6 +61,8 @@ $("span[id^='cal']").css({
     "z-index": 9999,
 })
 
+// セレクトボックスを小さくさせているclassを取り除く
+$("select").removeClass("custom-select-sm")
 
 run_on_page(function(){
     $('[data-toggle="tooltip"]').tooltip()

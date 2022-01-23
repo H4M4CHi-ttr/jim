@@ -1,6 +1,6 @@
 {
     "name": "JIM - Jobcan IMproved",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "manifest_version": 2,
     "description": "ジョブカンの痒いところに手を伸ばすための拡張機能です。",
     "content_scripts": [
@@ -81,6 +81,26 @@
             "js": ["js/employee/holiday_new.js"]
         },
         {
+            "": "employee 新規休暇申請 確認",
+            "matches": [
+                "https://ssl.jobcan.jp/employee/holiday/confirm",
+                "https://ssl.jobcan.jp/employee/holiday/confirm?*",
+                "https://ssl.jobcan.jp/employee/holiday/confirm/",
+                "https://ssl.jobcan.jp/employee/holiday/confirm/?*"
+            ],
+            "js": ["js/employee/holiday_confirm.js"]
+        },
+        {
+            "": "employee 新規休暇申請 終了",
+            "matches": [
+                "https://ssl.jobcan.jp/employee/holiday/finish",
+                "https://ssl.jobcan.jp/employee/holiday/finish?*",
+                "https://ssl.jobcan.jp/employee/holiday/finish/",
+                "https://ssl.jobcan.jp/employee/holiday/finish/?*"
+            ],
+            "js": ["js/employee/holiday_finish.js"]
+        },
+        {
             "": "employee 残業申請一覧",
             "matches": [
                 "https://ssl.jobcan.jp/employee/over-work",
@@ -98,7 +118,8 @@
                 "https://ssl.jobcan.jp/employee/over-work/new/",
                 "https://ssl.jobcan.jp/employee/over-work/new/?*"
             ],
-            "js": ["js/employee/over_work_new.js"]
+            "js": ["js/employee/over_work_new.js"],
+            "css": ["css/employee/over_work.css"]
         },
         {
             "": "employee 休日出勤申請一覧",
