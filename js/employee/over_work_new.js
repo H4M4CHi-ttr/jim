@@ -23,8 +23,42 @@ $.ajax("https://ssl.jobcan.jp/employee/over-work")
         $table.appendTo("#申請一覧")
     })
 
+//-----------------------------------------------
 // 残業時刻のプリセット調整
-$("select[name='end[h]']").val(18); // 18は20時のこと
+//-----------------------------------------------
+let now = moment()
+let h = now.hour()
+let m = now.minute()
+if (0 <= h && h < 8) {
+    // 深夜の場合は24時～をプリセット
+    h += 24
+} else if (8 <= h && h <= 17) {
+    // 日中の場合は18時をプリセット
+    h = 18
+    m = 0
+}
+
+// 分・時を30分単位で丸める
+if (0 <= m && m < 15){
+    m = 0
+} else if (15 <= m && m < 45){
+    m = 30
+} else{
+    h++
+    m = 0
+}
+// 時刻にマッチするoputionのvalueを探す
+let h_val = $("select#end_h option")
+    .filter((idx, el) => parseInt($(el).text()) === h)
+    .attr("value")
+let m_val = $("select#end_m option")
+    .filter((idx, el) => parseInt($(el).text()) === m)
+    .attr("value")
+
+// プリセット
+$("select#end_h").val(h_val);
+$("select#end_m").val(m_val);
+//-----------------------------------------------
 
 // 分のセレクトボックスを最初から広げておく
 $("select[name='end[m]'").attr("size","2")
