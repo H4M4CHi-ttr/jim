@@ -39,8 +39,10 @@ $(".jim-submenu-add-button").each(function () {
 //----------------------------------------------
 // 指定月で前月・翌月を押したとき自動で画面を切り替える
 //----------------------------------------------
-$(".calendar-arrow-btn").on("click", function(){
+$("label:contains('指定月')").closest("th").next("td").find(".calendar-arrow-btn").on("click", function(){
+    $("label:contains('指定月')").prev("input#search-type-month").prop("checked",true)
     $("input[value=表示]").click()
+    $("a.btn").filter((idx,el) => $(el).text() === "表示")[0].click()
 })
 
 //----------------------------------------------
