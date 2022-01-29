@@ -67,19 +67,22 @@ let $th残業理由 = $("table:nth-child(1) > tbody > tr:nth-child(3) > th")
 $th残業理由
     .append(
         $(`<button>`).attr({
-            id           : "jim-残業理由プリセット保存",
-            "class"      : "btn jbc-btn-secondary",
-            "data-toggle": "tooltip",
-            title        : "現在の値：" + localStorage.jim__template残業理由,
-            style        : "font-size: 0.8rem; margin: 5px 0",
+            id      : "jim-残業理由プリセット保存",
+            "class" : "btn jbc-btn-secondary",
+            style   : "font-size: 0.8rem; margin: 5px 0",
+
+            "data-tippy-content": "現在の値：" + localStorage.jim__template残業理由,
         }).text("プリセット保存")
     ).promise().done(function () {
         $("#jim-残業理由プリセット保存")
             .on("click", function (event) {
                 event.preventDefault();
                 localStorage.jim__template残業理由 = $("[name='description']").val()
-                $(this).attr("data-original-title", "現在の値：" + $("[name='description']").val())
+
+                // ツールチップの内容を更新
+                this._tippy.setProps({"content": "現在の値：" + $("[name='description']").val()})
             })
+        $("")
     })
 
 //------------------------------------------------------

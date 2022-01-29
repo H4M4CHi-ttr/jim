@@ -9,7 +9,12 @@
             "matches": ["https://ssl.jobcan.jp/*"],
             "js": [
                 "js/lib/jquery-3.6.0.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/tippy.js/dist/tippy.umd.min.js",
                 "js/lib/moment-with-locales.min.js"
+            ],
+            "css": [
+                "node_modules/tippy.js/dist/tippy.css"
             ],
             "run_at": "document_start"
         },
