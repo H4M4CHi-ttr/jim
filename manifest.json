@@ -1,6 +1,6 @@
 {
     "name": "JIM - Jobcan IMproved",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "manifest_version": 3,
     "description": "ジョブカンの痒いところに手を伸ばすための拡張機能です。",
     "content_scripts": [
@@ -9,7 +9,12 @@
             "matches": ["https://ssl.jobcan.jp/*"],
             "js": [
                 "js/lib/jquery-3.6.0.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/tippy.js/dist/tippy.umd.min.js",
                 "js/lib/moment-with-locales.min.js"
+            ],
+            "css": [
+                "node_modules/tippy.js/dist/tippy.css"
             ],
             "run_at": "document_start"
         },

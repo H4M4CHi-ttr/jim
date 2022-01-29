@@ -20,8 +20,7 @@ function create_link_add_google_calendar(区分, 開始日, 期間, 終了日 = 
         .attr({
             href: generate_url_add_google_calendar(区分, 開始日, 期間, 終了日),
             target: "_blank",
-            "data-toggle": "tooltip",
-            title: "Googleカレンダーに登録",
+            "data-tippy-content": "Googleカレンダーに登録",
         })
 }
 
