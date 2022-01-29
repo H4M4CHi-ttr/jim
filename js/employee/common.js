@@ -19,8 +19,7 @@ $(".jim-dropdown-item-wrapper").append(/*html*/`
   
     <a 
       class="jim-submenu-add-button"
-      data-toggle="tooltip"
-      data-placement="right"
+      data-tippy-placement="right"
     >
       <i class="fa fa-plus" aria-hidden="true" style="font-size: 1.2rem;"></i>
     </a>
@@ -32,7 +31,7 @@ $(".jim-submenu-add-button").each(function () {
     var 申請タイプ = $(this).prev("a").text()
     $(this).attr({
         href: add_href,
-        title: "新規" + 申請タイプ,
+        "data-tippy-content": "新規" + 申請タイプ,
     })
 })
 
@@ -64,6 +63,5 @@ $("span[id^='cal']").css({
 // セレクトボックスを小さくさせているclassを取り除く
 $("select").removeClass("custom-select-sm")
 
-run_on_page(function(){
-    $('[data-toggle="tooltip"]').tooltip()
+tippy('[data-tippy-content]',{
 })
