@@ -1,1 +1,0 @@
-$("body").append('<script id="jim-init">')
