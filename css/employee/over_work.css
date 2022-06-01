@@ -1,9 +1,0 @@
-select[name^=end] {
-	font-size: 1.2rem
-}
-
- select#end_h
-,select#end_m
-{
-	width: 60px;
-}
