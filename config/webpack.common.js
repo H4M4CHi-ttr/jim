@@ -17,6 +17,9 @@ const common = {
     // the filename template for entry chunks
     filename: '[name].js',
   },
+  optimization:{
+    minimize: false
+  },
   stats: {
     all: false,
     errors: true,
