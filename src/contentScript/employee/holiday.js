@@ -95,7 +95,7 @@ function holiday_confirm(){
 
 	const 休暇名     = $("th:contains('休暇名')").next("td").text()
 	const 休暇区分   = extract_休暇区分(休暇名)
-	const 休暇希望日 = $("th:contains('休暇希望日')").next("td").text().replace(/年|月|日/g, "-")
+	const 休暇希望日 = $("th:contains('休暇希望日')").next("td").text().replace(/年|月/g, "-").replace(/日/g, "")
 
 	let 休暇開始日 = 休暇希望日
 	let 休暇終了日 = null

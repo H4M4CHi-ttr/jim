@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "JIM - Jobcan IMproved",
-  "version": "2.0.0",
-  "description": "ジョブカンの痒いところに手を伸ばすための拡張機能です。",
+  "version": "2.0.1",
+  "description": "ジョブカンのUX向上拡張機能です。",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
